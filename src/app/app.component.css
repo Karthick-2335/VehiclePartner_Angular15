@@ -1,0 +1,25 @@
+/* Webpixels CSS */
+/* Utility and component-centric Design System based on Bootstrap for fast, responsive UI development */
+/* URL: https://github.com/webpixels/css */
+
+@import url(https://unpkg.com/@webpixels/css@1.1.5/dist/index.css);
+
+/* Bootstrap Icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
+
+.arrowProduct{
+    margin-left: 95px;
+    transition: 0.3s;
+}
+.arrowEmployee{
+    margin-left: 80px;
+    transition: 0.3s;
+}
+.arrowBranch{
+    margin-left: 100px;
+    transition: 0.3s;
+}
+.dropdown{
+    margin-left:30px !important;
+    transition: all 0.8s ease-in;
+}

@@ -1,1 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';  
+*
+{
+    font-family: 'Poppins', sans-serif !important;
+}
+.body {
+    background: rgb(9,45,245);
+    background: linear-gradient(90deg, rgba(9,45,245,1) 0%, rgba(93,40,238,1) 33%, rgba(133,8,235,1) 71%, rgba(123,30,199,1) 99%);;
+    height: 100vh;
+  }
+  .form-control {
+    box-shadow: none;
+    border-color: black;
+    height: 45px;
+  }
+  .form-control:focus {
+    border-color: #8632f4; 
+  }
+  .login-form {
+    width: 450px;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+  }
+  .login-form form {
+    color: #434343;
+    border-radius: 1px;
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #f3f3f3;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+  }
+  .login-form h4 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .login-form .avatar {
+    color: #fff;
+    margin: 0 auto 30px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 9;
+    background: #8632f4;
+    padding: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  .login-form .avatar i {
+    font-size: 62px;
+  }
+  .login-form .form-group {
+    margin-bottom: 20px;
+  }
+  .login-form .form-control, .login-form .btn {
+    min-height: 40px;
+    border-radius: 2px; 
+    transition: all 0.5s;
+  }
+  .login-form .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  .login-form .btn {
+    background:  #8632f4;
+    border: none;
+    line-height: normal;
+  }
+  .login-form .btn:hover, .login-form .btn:focus {
+    background:  #8632f4;
+  }
+  
+  .login-form input[type="checkbox"] {
+    margin-top: 2px;
+  }
+  .login-form .forgot-link {
+    float: right;
+  }
+  .login-form .small {
+    font-size: 13px;
+  }
+  .login-form a {
+    color:  #8632f4;
+  }
+  .checkbox-inline{
+    display: flex;
+    align-items: stretch;
+    justify-content: left;
+  }
+  .modal-body{
+    justify-content: center;
+    gap:10px;
+  }
+ 

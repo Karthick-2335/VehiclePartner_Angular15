@@ -1,0 +1,25 @@
+<div class="body">
+  <div class="login-form"> 
+      <form #f='ngForm' (submit)="onSubmit(f)">
+          <div class="avatar"><i style="font-size:24px" class="fa">&#xf21b;</i></div>
+          <h4 class="modal-title">Login to Your Account</h4>
+          <div class="form-group">
+              <input type="text" class="form-control" placeholder="Email" name="email" ngModel #userName='ngModel' (change)="getValue(userName)" required [ngClass]="{ 'is-invalid' : userName.invalid && userName.touched }">
+              <div class="alert-danger p-2 text-left" *ngIf="userName.invalid && userName.touched">Email is required..</div>
+          </div>
+          <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" name="password" ngModel #password='ngModel' (change)="getValue(password)" required [ngClass]="{ 'is-invalid' : password.invalid && password.touched }">
+              <div class="alert-danger p-2 text-left" *ngIf="password.invalid && password.touched">Password is required..</div>
+          </div>
+          <div class="form-group small clearfix">
+              <label class="checkbox-inline"><input type="checkbox" style="width: 35px;" name="termscondition" ngModel> Remember me</label>
+              <a href="#" class="forgot-link">Forgot Password?</a>
+          </div> 
+          <input type="submit" class="btn btn-primary btn-block btn-lg" [disabled]="f.invalid" value="Login">     
+          <div class="text-center mt-3">
+            <p>Create new account?</p>
+            <a href="#" class="text-center" routerLink="/Register">Register</a>
+          </div>         
+      </form>			
+  </div>
+</div>
