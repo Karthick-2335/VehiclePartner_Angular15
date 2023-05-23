@@ -4,10 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DataTableComponent } from './data-table/data-table.component';
 import { FormsLoginComponent } from './forms-login/forms-login.component';
-import { FormsFromsCollapseComponent } from './forms-froms-collapse/forms-froms-collapse.component';
-import { FormsMultipleFormsComponent } from './forms-multiple-forms/forms-multiple-forms.component';
 import { FormsModule } from '@angular/forms';
 import { LoginAuthService } from './services/login-auth.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -23,10 +20,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
   declarations: [
     AppComponent,
     DashboardComponent,
-    DataTableComponent,
     FormsLoginComponent,
-    FormsFromsCollapseComponent,
-    FormsMultipleFormsComponent,
     PageNotFoundComponent,
     RegistrationComponent,
     ProfileComponent,
