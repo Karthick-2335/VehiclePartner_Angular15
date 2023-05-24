@@ -6,7 +6,7 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginAuthService {
-  private data = new BehaviorSubject('N');;
+  private data = new BehaviorSubject('N');
   data$ = this.data.asObservable();
 
   changeData(data: string) {

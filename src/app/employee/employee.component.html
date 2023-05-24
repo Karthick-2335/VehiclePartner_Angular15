@@ -2,83 +2,137 @@
     <h5 class="mb-0">Create Employee</h5>
 </div>
 <div class="container rounded bg-white mb-5">
-    <div class="row mt-3">
-        <div class="col form-group">
-            <label>Firstname</label>
-            <input type="text" class="form-control">
+    <form [formGroup]='employeeFrom' (ngSubmit)="onSubmit()">
+        <div class="row mt-3">
+            <div class="col form-group">
+                <label>Firstname</label>
+                <input type="text" class="form-control" name="Firstname" [formControl] ="Firstname" [ngClass]="{'is-invalid' : Firstname.touched && Firstname.invalid}">
+                <div class="alert alert-danger" *ngIf="Firstname.touched && Firstname.invalid">
+                    <div *ngIf="Firstname.errors?.required">Firstname is mandatory..</div>
+                    <div *ngIf="Firstname.errors?.minlength">minlength is atleast 10 </div>
+                </div>
+            </div>
+            <div class="col form-group">
+                <label>Lastname</label>
+                <input type="text" class="form-control" name="Lastname" [formControl] ="Lastname" [ngClass]="{'is-invalid' : Lastname.touched && Lastname.invalid}">
+                <div class="alert alert-danger" *ngIf="Lastname.touched && Firstname.invalid">
+                    <div *ngIf="Lastname.errors?.required">Lastname is mandatory..</div>
+                    <div *ngIf="Lastname.errors?.minlength">minlength is atleast 10 </div>
+                </div>
+            </div>
+            <div class="col form-group">
+                <label>Mobile</label>
+                <input type="text" class="form-control" name="Mobile" [formControl] ="Mobile" [ngClass]="{'is-invalid' : Mobile.touched && Mobile.invalid}">
+                <div class="alert alert-danger" *ngIf="Mobile.touched && Mobile.invalid">
+                    <div *ngIf="Mobile.errors?.required">Mobile is mandatory..</div>
+                    <div *ngIf="Mobile.errors?.pattern">Enter Valid MobileNumber..</div>
+                </div>
+            </div>
+            <div class="col form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" name="Email" [formControl] ="Email" [ngClass]="{'is-invalid' : Email.touched && Email.invalid}">
+                <div class="alert alert-danger" *ngIf="Email.touched && Email.invalid">
+                    <div *ngIf="Email.errors?.required">Emal is mandatory..</div>
+                    <div *ngIf="Email.errors?.pattern">Enter Valid Email..</div>
+                </div>
+            </div>
         </div>
-        <div class="col form-group">
-            <label>Lastname</label>
-            <input type="text" class="form-control">
+        <div class="row mt-3">
+            <div class="col form-group">
+                <label>AddressLine1</label>
+                <input type="text" class="form-control" name="AddressLine1" [formControl] ="AddressLine1" [ngClass]="{'is-invalid' : AddressLine1.touched && AddressLine1.invalid}">
+                <div class="alert alert-danger" *ngIf="AddressLine1.touched && AddressLine1.invalid">
+                    <div *ngIf="AddressLine1.errors?.required">AddressLine1 is mandatory..</div>
+                </div>
+            </div>
+            <div class="col form-group">
+                <label>AddressLine2</label>
+                <input type="text" class="form-control" name="AddressLine2" [formControl] ="AddressLine2" [ngClass]="{'is-invalid' : AddressLine2.touched && AddressLine2.invalid}">
+                <div class="alert alert-danger" *ngIf="AddressLine2.touched && AddressLine2.invalid">
+                    <div *ngIf="AddressLine2.errors?.required">AddressLine2 is mandatory..</div>
+                </div>
+            </div>
+            <div class="col form-group">
+                <label>State</label>
+                <input type="text" class="form-control" name="State" [formControl] ="State" [ngClass]="{'is-invalid' : State.touched && State.invalid}">
+                <div class="alert alert-danger" *ngIf="State.touched && State.invalid">
+                    <div *ngIf="State.errors?.required">State is mandatory..</div>
+                </div>
+            </div>
+            <div class="col form-group">
+                <label>District</label>
+                <input type="text" class="form-control" name="District" [formControl] ="District" [ngClass]="{'is-invalid' : District.touched && District.invalid}">
+                <div class="alert alert-danger" *ngIf="District.touched && District.invalid">
+                    <div *ngIf="District.errors?.required">District is mandatory..</div>
+                </div>
+            </div>
         </div>
-        <div class="col form-group">
-            <label>Mobile</label>
-            <input type="text" class="form-control">
+        <div class="row mt-3">
+            <div class="col form-group">
+                <label>Country</label>
+                <input type="text" class="form-control" name="Country" [formControl] ="Country" [ngClass]="{'is-invalid' : Country.touched && Country.invalid}">
+                <div class="alert alert-danger" *ngIf="Country.touched && Country.invalid">
+                    <div *ngIf="Country.errors?.required">Country is mandatory..</div>
+                </div>
+            </div>
+            <div class="col form-group">
+                <label>City</label>
+                <input type="text" class="form-control" name="City" [formControl] ="City" [ngClass]="{'is-invalid' : City.touched && City.invalid}">
+                <div class="alert alert-danger" *ngIf="City.touched && City.invalid">
+                    <div *ngIf="City.errors?.required">City is mandatory..</div>
+                </div>
+            </div>
+            <div class="col form-group">
+                <label>Pincode</label>
+                <input type="text" class="form-control" name="Pincode" [formControl] ="Pincode" [ngClass]="{'is-invalid' : Pincode.touched && Pincode.invalid}">
+                <div class="alert alert-danger" *ngIf="Pincode.touched && Pincode.invalid">
+                    <div *ngIf="Pincode.errors?.required">Pincode is mandatory..</div>
+                </div>
+            </div>
+            <div class="col form-group">
+                <label>Education</label>
+                <select class="form-control" name="Education" [formControl] ="Education" [ngClass]="{'is-invalid' : Education.touched && Education.invalid}">
+                    <option>Degree</option>
+                    <option>HSC</option>
+                    <option>SSLC</option>
+                </select>
+                <div class="alert alert-danger" *ngIf="Education.touched && Education.invalid">
+                    <div *ngIf="Education.errors?.required">Education is mandatory..</div>
+                </div>
+            </div>
         </div>
-        <div class="col form-group">
-            <label>Email</label>
-            <input type="text" class="form-control">
+        <div class="row mt-3">
+            <div class="col form-group">
+                <label>AadhaarNumber</label>
+                <input type="text" class="form-control" name="AadhaarNumber" [formControl] ="AadhaarNumber" [ngClass]="{'is-invalid' : AadhaarNumber.touched && AadhaarNumber.invalid}">
+                <div class="alert alert-danger" *ngIf="AadhaarNumber.touched && AadhaarNumber.invalid">
+                    <div *ngIf="AadhaarNumber.errors?.required">AadhaarNumber is mandatory..</div>
+                </div>
+            </div>
+            <div class="col form-group">
+                <label>AadhaarUpload</label>
+                <input type="file" class="form-control" name="AadhaarUpload" [formControl] ="AadhaarUpload" [ngClass]="{'is-invalid' : AadhaarUpload.invalid}">
+                <div class="alert alert-danger" *ngIf="AadhaarUpload.invalid">
+                    <div *ngIf="AadhaarUpload.errors?.required">AadhaarUpload is mandatory..</div>
+                </div>
+            </div>
+            <div class="col form-group">
+                <label>Pannumber</label>
+                <input type="text" class="form-control" name="Pannumber" [formControl] ="Pannumber" [ngClass]="{'is-invalid' : Pannumber.touched && Pannumber.invalid}">
+                <div class="alert alert-danger" *ngIf="Pannumber.touched && Email.invalid">
+                    <div *ngIf="Pannumber.errors?.required">Pannumber is mandatory..</div>
+                </div>
+            </div>
+            <div class="col form-group">
+                <label>Pancard</label>
+                <input type="file" class="form-control" name="Pancard" [formControl] ="Pancard" [ngClass]="{'is-invalid' : Pancard.invalid}">
+                <div class="alert alert-danger" *ngIf="Pancard.invalid">
+                    <div *ngIf="Pancard.errors?.required">Pancard is mandatory..</div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col form-group">
-            <label>AddressLine1</label>
-            <input type="text" class="form-control">
+        <div class="text-center mt-5">
+            <button class="btn btn-success" [disabled]="employeeFrom.invalid">Submit</button>
         </div>
-        <div class="col form-group">
-            <label>AddressLine2</label>
-            <input type="text" class="form-control">
-        </div>
-        <div class="col form-group">
-            <label>State</label>
-            <input type="text" class="form-control">
-        </div>
-        <div class="col form-group">
-            <label>District</label>
-            <input type="text" class="form-control">
-        </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col form-group">
-            <label>Country</label>
-            <input type="text" class="form-control">
-        </div>
-        <div class="col form-group">
-            <label>City</label>
-            <input type="text" class="form-control">
-        </div>
-        <div class="col form-group">
-            <label>Pincode</label>
-            <input type="text" class="form-control">
-        </div>
-        <div class="col form-group">
-            <label>Education</label>
-            <select class="form-control">
-                <option>Degree</option>
-                <option>HSC</option>
-                <option>SSLC</option>
-            </select>
-        </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col form-group">
-            <label>AadhaarNumber</label>
-            <input type="text" class="form-control">
-        </div>
-        <div class="col form-group">
-            <label>AadhaarUpload</label>
-            <input type="file" class="form-control">
-        </div>
-        <div class="col form-group">
-            <label>Pannumber</label>
-            <input type="text" class="form-control">
-        </div>
-        <div class="col form-group">
-            <label>Pancard</label>
-            <input type="file" class="form-control">
-        </div>
-    </div>
-    <div class="text-center mt-5">
-        <button class="btn btn-success">Submit</button>
-    </div>
+    </form>
 </div>
