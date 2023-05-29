@@ -10,17 +10,18 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent,canActivate:[AuthGuard] },
   { path: 'formsLogin', component: FormsLoginComponent },
   { path: 'Register', component: RegistrationComponent },
-  { path: 'Profile', component: ProfileComponent },
-  { path: 'Branch', component: BranchComponent },
-  { path: 'Vehicle', component: VehicleComponent },
-  { path: 'VehicleList', component: VehicleListComponent },
-  { path: 'Employee', component: EmployeeComponent },
-  { path: 'EmployeeList', component: EmployeeListComponent },
+  { path: 'Profile', component: ProfileComponent ,canActivate:[AuthGuard]},
+  { path: 'Branch', component: BranchComponent,canActivate:[AuthGuard] },
+  { path: 'Vehicle', component: VehicleComponent,canActivate:[AuthGuard] },
+  { path: 'VehicleList', component: VehicleListComponent,canActivate:[AuthGuard] },
+  { path: 'Employee', component: EmployeeComponent,canActivate:[AuthGuard] },
+  { path: 'EmployeeList', component: EmployeeListComponent,canActivate:[AuthGuard] },
   { path: '',   redirectTo: '/formsLogin', pathMatch: 'full' }, //Default Page
   { path: '**', pathMatch: 'full',component: PageNotFoundComponent } //redirect to 404 page
 ];
